@@ -1,0 +1,29 @@
+{
+  "name": "cli-devtools-electron",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "electron": "electron -r babel-register src/main.js",
+    "start": "NODE_ENV=development nodemon --watch ./src/**/* --watch . --exec 'npm run electron'",
+    "dist": "yarn compile && electron-builder"
+  },
+  "repository": "https://github.com/bersilius/cli-devtools-electron",
+  "keywords": [],
+  "author": "Adam Bereczk",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "devtron": "^1.4.0",
+    "electron": "4.1.4",
+    "electron-builder": "^20.39.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.3.13",
+    "electron-devtools-installer": "^2.2.4",
+    "rxjs": "^6.4.0"
+  }
+}
